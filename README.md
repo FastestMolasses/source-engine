@@ -32,17 +32,15 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 
 # Current tasks
 - Rewrite materialsystem for OpenGL render
-- dxvk-native support
-- Elbrus port
 - Bink audio support( for video_bink )
 
-# How to Build?
-- [Building instructions(EN)](https://github.com/nillerusr/source-engine/wiki/Source-Engine-(EN))
-- [Building instructions(RU)](https://github.com/nillerusr/source-engine/wiki/Source-Engine-(RU))
+# Installing
+`brew install sdl2 freetype2 fontconfig pkg-config opus libpng libedit`
+`git submodule update --init --recursive`
 
-# Support me
-BTC: `bc1qnjq92jj9uqjtafcx2zvnwd48q89hgtd6w8a6na`
+copy half life 2 files to halflife2 folder
+`/Users/abe/Library/Application Support/Steam/steamapps/common/Half-Life 2` > `halflife2/`
 
-ETH: `0x5d0D561146Ed758D266E59B56e85Af0b03ABAF46`
-
-XMR: `48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJ`
+`python ./waf configure -T release --64bits`
+`python ./waf configure -T release --build-games=hl2 --prefix=halflife2/ install --64bits`
+From the terminal, run `cd halflife2` then `./hl2_launcher`
